@@ -56,5 +56,23 @@ namespace CHAMADO
             CarregarChamados();
         }
 
+        private void telacliente_Load(object sender, EventArgs e)
+        {
+            CarregarChamados();
+        }
+
+        private void botnovo_Click(object sender, EventArgs e)
+        {
+            novochamado novaTela = new novochamado();
+            novaTela.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonOP_Click(object sender, EventArgs e)
+        {
+            telaoperador novaTela = new telaoperador();
+            novaTela.ShowDialog();
+            this.Show();
+        }
     }
 }

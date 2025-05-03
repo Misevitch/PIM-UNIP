@@ -54,9 +54,9 @@
             this.labelemail.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelemail.Location = new System.Drawing.Point(26, 93);
             this.labelemail.Name = "labelemail";
-            this.labelemail.Size = new System.Drawing.Size(100, 16);
+            this.labelemail.Size = new System.Drawing.Size(61, 16);
             this.labelemail.TabIndex = 0;
-            this.labelemail.Text = "E-mail utilizado:";
+            this.labelemail.Text = "Matricula";
             // 
             // textBoxemail
             // 
