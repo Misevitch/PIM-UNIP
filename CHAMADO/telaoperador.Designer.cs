@@ -1,6 +1,6 @@
 ﻿namespace CHAMADO
 {
-    partial class Form1
+    partial class telaoperador
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt1 = new System.Windows.Forms.Label();
-            this.botnovo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonatualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 323);
-            this.dataGridView1.TabIndex = 0;
             // 
             // txt1
             // 
@@ -53,40 +43,39 @@
             this.txt1.TabIndex = 1;
             this.txt1.Text = "Minhas solicitações";
             // 
-            // botnovo
+            // buttonatualizar
             // 
-            this.botnovo.Location = new System.Drawing.Point(672, 22);
-            this.botnovo.Name = "botnovo";
-            this.botnovo.Size = new System.Drawing.Size(105, 23);
-            this.botnovo.TabIndex = 2;
-            this.botnovo.Text = "+ Novo Chamado";
-            this.botnovo.UseVisualStyleBackColor = true;
-            this.botnovo.Click += new System.EventHandler(this.botnovo_Click);
+            this.buttonatualizar.Location = new System.Drawing.Point(718, 22);
+            this.buttonatualizar.Name = "buttonatualizar";
+            this.buttonatualizar.Size = new System.Drawing.Size(57, 23);
+            this.buttonatualizar.TabIndex = 2;
+            this.buttonatualizar.Text = "Atualizar";
+            this.buttonatualizar.UseVisualStyleBackColor = true;
+            this.buttonatualizar.Click += new System.EventHandler(this.buttonatualizar_Click);
             // 
-            // Form1
+            // chamadosclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.botnovo);
+            this.Controls.Add(this.buttonatualizar);
             this.Controls.Add(this.txt1);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "chamadosclientes";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tela de chamados";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label txt1;
-        private System.Windows.Forms.Button botnovo;
+        private System.Windows.Forms.Button buttonatualizar;
     }
 }
 
