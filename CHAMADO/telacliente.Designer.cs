@@ -41,10 +41,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 31);
+            this.label1.Size = new System.Drawing.Size(250, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Chamados";
-            this.label1.UseWaitCursor = true;
+            this.label1.Text = "Minhas solicitações";
             // 
             // buttonatualizar
             // 
@@ -54,7 +53,6 @@
             this.buttonatualizar.TabIndex = 2;
             this.buttonatualizar.Text = "Atualizar";
             this.buttonatualizar.UseVisualStyleBackColor = true;
-            this.buttonatualizar.UseWaitCursor = true;
             this.buttonatualizar.Click += new System.EventHandler(this.buttonatualizar_Click);
             // 
             // botnovo
@@ -65,7 +63,6 @@
             this.botnovo.TabIndex = 2;
             this.botnovo.Text = "+ Novo Chamado";
             this.botnovo.UseVisualStyleBackColor = true;
-            this.botnovo.UseWaitCursor = true;
             this.botnovo.Click += new System.EventHandler(this.botnovo_Click);
             // 
             // buttonOP
@@ -76,7 +73,6 @@
             this.buttonOP.TabIndex = 2;
             this.buttonOP.Text = "Operador";
             this.buttonOP.UseVisualStyleBackColor = true;
-            this.buttonOP.UseWaitCursor = true;
             this.buttonOP.Click += new System.EventHandler(this.buttonOP_Click);
             // 
             // telacliente
@@ -94,7 +90,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
-            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.telacliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

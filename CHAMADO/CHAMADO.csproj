@@ -92,6 +92,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalheChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalheChamado.Designer.cs">
+      <DependentUpon>DetalheChamado.cs</DependentUpon>
+    </Compile>
     <Compile Include="telaoperador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DetalheChamado.resx">
+      <DependentUpon>DetalheChamado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="telaoperador.resx">
       <DependentUpon>telaoperador.cs</DependentUpon>
     </EmbeddedResource>

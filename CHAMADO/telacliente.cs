@@ -13,16 +13,15 @@ namespace CHAMADO
 {
     public partial class telacliente : Form
     {
-        private DataGridView dgvChamados;
+        private DataGridView dgvChamadosCliente;
         private string connString = "Host=localhost;Username=postgres;Password=030125;Database=chamados";
-
         public telacliente()
         {
             InitializeComponent();
-            dgvChamados = new DataGridView();
-            dgvChamados.Location = new Point(30, 60); // posição no formulário
-            dgvChamados.Size = new Size(650, 350);    // largura e altura
-            this.Controls.Add(dgvChamados);
+            dgvChamadosCliente = new DataGridView();
+            dgvChamadosCliente.Location = new Point(30, 60); // posição no formulário
+            dgvChamadosCliente.Size = new Size(650, 350);    // largura e altura
+            this.Controls.Add(dgvChamadosCliente);
         }
 
 
@@ -40,7 +39,7 @@ namespace CHAMADO
                         {
                             DataTable dt = new DataTable();
                             dt.Load(reader);
-                            dgvChamados.DataSource = dt;
+                            dgvChamadosCliente.DataSource = dt;
                         }
                     }
                 }
