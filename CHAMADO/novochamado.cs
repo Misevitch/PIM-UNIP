@@ -13,7 +13,8 @@ namespace CHAMADO
 {
     public partial class novochamado : Form
     {
-        private string connString = "Host=localhost;Username=postgres;Password=030125;Database=chamados";
+        private string connString = "Host=localhost;Username=postgres;Password=030125;Database=pim";
+        private object matricula;
 
         public novochamado()
         {
@@ -23,6 +24,7 @@ namespace CHAMADO
         private void buttoncriarchamado_Click_1(object sender, EventArgs e)
         {
             string descricao = textBoxdescricao.Text;
+            string matricula = textBoxmatri.Text;
 
             if (string.IsNullOrWhiteSpace(descricao))
             {
@@ -37,15 +39,17 @@ namespace CHAMADO
                 {
                     conn.Open();
 
-                    string query = "INSERT INTO chamados (descricao) VALUES (@descricao)";
+                    string query = "INSERT INTO pim (matricula, descricao) VALUES (@matricula, @descricao)";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("descricao", descricao);
+                        cmd.Parameters.AddWithValue("matricula", matricula);
                         cmd.ExecuteNonQuery();
                     }
 
                     MessageBox.Show("Chamado registrado com sucesso!");
                     textBoxdescricao.Clear();
+                    this.Close();
                 }
             }
             catch (Exception ex)

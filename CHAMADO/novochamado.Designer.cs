@@ -30,7 +30,7 @@
         {
             this.txt1 = new System.Windows.Forms.Label();
             this.labelemail = new System.Windows.Forms.Label();
-            this.textBoxemail = new System.Windows.Forms.TextBox();
+            this.textBoxmatri = new System.Windows.Forms.TextBox();
             this.labeldescricao = new System.Windows.Forms.Label();
             this.textBoxdescricao = new System.Windows.Forms.TextBox();
             this.buttoncriarchamado = new System.Windows.Forms.Button();
@@ -58,12 +58,12 @@
             this.labelemail.TabIndex = 0;
             this.labelemail.Text = "Matricula";
             // 
-            // textBoxemail
+            // textBoxmatri
             // 
-            this.textBoxemail.Location = new System.Drawing.Point(164, 92);
-            this.textBoxemail.Name = "textBoxemail";
-            this.textBoxemail.Size = new System.Drawing.Size(278, 20);
-            this.textBoxemail.TabIndex = 1;
+            this.textBoxmatri.Location = new System.Drawing.Point(164, 92);
+            this.textBoxmatri.Name = "textBoxmatri";
+            this.textBoxmatri.Size = new System.Drawing.Size(278, 20);
+            this.textBoxmatri.TabIndex = 1;
             // 
             // labeldescricao
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.txt1);
             this.Controls.Add(this.textBoxdescricao);
             this.Controls.Add(this.labeldescricao);
-            this.Controls.Add(this.textBoxemail);
+            this.Controls.Add(this.textBoxmatri);
             this.Controls.Add(this.labelemail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -120,7 +120,7 @@
         #endregion
         private System.Windows.Forms.Label txt1;
         private System.Windows.Forms.Label labelemail;
-        private System.Windows.Forms.TextBox textBoxemail;
+        private System.Windows.Forms.TextBox textBoxmatri;
         private System.Windows.Forms.Label labeldescricao;
         private System.Windows.Forms.TextBox textBoxdescricao;
         private System.Windows.Forms.Button buttoncriarchamado;

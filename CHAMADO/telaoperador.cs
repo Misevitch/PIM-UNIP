@@ -25,6 +25,7 @@ namespace CHAMADO
             this.Controls.Add(dgvChamados);
             dgvChamados.CellDoubleClick += dgvChamados_CellDoubleClick;
             dgvChamados.ReadOnly = true;
+            CarregarChamados();
 
         }
 
@@ -36,7 +37,7 @@ namespace CHAMADO
                 using (var conn = new NpgsqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT id, matricula, descricao, status, operador, data_abertura FROM pim ORDER BY data_abertura DESC";
+                    string query = "SELECT id, matricula, descricao, status, operador, data_abertura FROM pim ORDER BY id ASC";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         using (var reader = cmd.ExecuteReader())
@@ -68,6 +69,18 @@ namespace CHAMADO
                 DetalheChamado detalhesForm = new DetalheChamado(chamadoId);
                 detalhesForm.ShowDialog();
             }
+        }
+
+
+
+
+
+
+        private void botnovo_Click(object sender, EventArgs e)
+        {
+            novochamado novaTela = new novochamado();
+            novaTela.ShowDialog();
+            this.Show();
         }
 
 

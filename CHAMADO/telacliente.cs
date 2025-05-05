@@ -14,7 +14,7 @@ namespace CHAMADO
     public partial class telacliente : Form
     {
         private DataGridView dgvChamadosCliente;
-        private string connString = "Host=localhost;Username=postgres;Password=030125;Database=chamados";
+        private string connString = "Host=localhost;Username=postgres;Password=030125;Database=pim";
         public telacliente()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace CHAMADO
                 using (var conn = new NpgsqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT id, descricao, data_criacao FROM chamados ORDER BY data_criacao DESC";
+                    string query = "SELECT id, matricula, descricao, status, operador, data_abertura FROM pim ORDER BY id ASC";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         using (var reader = cmd.ExecuteReader())

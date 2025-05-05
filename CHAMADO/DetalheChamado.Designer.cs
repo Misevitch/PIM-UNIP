@@ -38,6 +38,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.labeldata = new System.Windows.Forms.Label();
             this.txtData = new System.Windows.Forms.TextBox();
+            this.buttonUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelMatr
@@ -136,12 +137,23 @@
             this.txtData.Size = new System.Drawing.Size(199, 20);
             this.txtData.TabIndex = 6;
             // 
+            // buttonUp
+            // 
+            this.buttonUp.Location = new System.Drawing.Point(372, 432);
+            this.buttonUp.Name = "buttonUp";
+            this.buttonUp.Size = new System.Drawing.Size(75, 23);
+            this.buttonUp.TabIndex = 7;
+            this.buttonUp.Text = "Salvar";
+            this.buttonUp.UseVisualStyleBackColor = true;
+            this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
+            // 
             // DetalheChamado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuText;
             this.ClientSize = new System.Drawing.Size(801, 495);
+            this.Controls.Add(this.buttonUp);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtData);
             this.Controls.Add(this.txtMatricula);
@@ -157,7 +169,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetalheChamado";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.DetalheChamado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +187,6 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label labeldata;
         private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.Button buttonUp;
     }
 }

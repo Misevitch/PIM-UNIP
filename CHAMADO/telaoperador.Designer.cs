@@ -30,6 +30,7 @@
         {
             this.txt1 = new System.Windows.Forms.Label();
             this.buttonatualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt1
@@ -53,6 +54,16 @@
             this.buttonatualizar.UseVisualStyleBackColor = true;
             this.buttonatualizar.Click += new System.EventHandler(this.buttonatualizar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(613, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Novo chamado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.botnovo_Click);
+            // 
             // telaoperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -60,6 +71,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonatualizar);
             this.Controls.Add(this.txt1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -75,6 +87,7 @@
         #endregion
         private System.Windows.Forms.Label txt1;
         private System.Windows.Forms.Button buttonatualizar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

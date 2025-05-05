@@ -16,7 +16,7 @@ namespace CHAMADO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new telaoperador());
+            Application.Run(new telacliente());
         }
     }
 }

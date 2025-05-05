@@ -82,5 +82,24 @@ namespace CHAMADO
             }
         }
 
+        private void buttonUp_Click(object sender, EventArgs e)
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Username=postgres;Password=030125;Database=pim"))
+            {
+                conn.Open();
+                string update = "UPDATE pim SET status = @status, operador = @operador WHERE id = @id";
+                using (NpgsqlCommand cmd = new NpgsqlCommand(update, conn))
+                {
+                    cmd.Parameters.AddWithValue("status", comboStatus.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("operador", comboOperador.Text);
+                    cmd.Parameters.AddWithValue("id", chamadoId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show("Chamado atualizado com sucesso!");
+            this.Close();
+        }
     }
 }
