@@ -20,8 +20,8 @@ namespace CHAMADO
         {
             InitializeComponent();
             dgvChamados = new DataGridView();
-            dgvChamados.Location = new Point(30, 60); // posição no formulário
-            dgvChamados.Size = new Size(650, 300);    // largura e altura
+            dgvChamados.Location = new Point(30, 90); // posição no formulário
+            dgvChamados.Size = new Size(600, 300);    // largura e altura
             this.Controls.Add(dgvChamados);
             dgvChamados.CellDoubleClick += dgvChamados_CellDoubleClick;
             dgvChamados.ReadOnly = true;
@@ -37,7 +37,7 @@ namespace CHAMADO
                 using (var conn = new NpgsqlConnection(connString))
                 {
                     conn.Open();
-                    string query = "SELECT id, matricula, descricao, status, operador, data_abertura FROM pim ORDER BY id ASC";
+                    string query = "SELECT * FROM pim WHERE status IN ('Aberto', 'Em andamento') ORDER BY id ASC";
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         using (var reader = cmd.ExecuteReader())
@@ -71,7 +71,37 @@ namespace CHAMADO
             }
         }
 
+        private void ButtonPesquisarid_Click(object sender, EventArgs e)
+        {
+            string id = textid.Text.Trim();
 
+            if (string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Digite algum ID.");
+                return;
+            }
+
+            string connectionString = "Host=localhost;Username=postgres;Password=030125;Database=pim";
+
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM pim WHERE id = @id";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("id", int.Parse(id));
+
+                    using (var adapter = new NpgsqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dgvChamados.DataSource = dt;
+                    }
+                }
+            }
+
+        }
 
 
 

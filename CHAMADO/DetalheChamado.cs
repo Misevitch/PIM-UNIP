@@ -95,11 +95,13 @@ namespace CHAMADO
                     cmd.Parameters.AddWithValue("id", chamadoId);
 
                     cmd.ExecuteNonQuery();
+
                 }
             }
-
+            CarregarChamado();
             MessageBox.Show("Chamado atualizado com sucesso!");
             this.Close();
+            
         }
     }
 }

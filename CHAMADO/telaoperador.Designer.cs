@@ -31,6 +31,9 @@
             this.txt1 = new System.Windows.Forms.Label();
             this.buttonatualizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textid = new System.Windows.Forms.TextBox();
+            this.ButtonPesquisarid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt1
@@ -64,6 +67,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.botnovo_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(23, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Pesquise o chamado :";
+            // 
+            // textid
+            // 
+            this.textid.Location = new System.Drawing.Point(231, 60);
+            this.textid.Name = "textid";
+            this.textid.Size = new System.Drawing.Size(100, 20);
+            this.textid.TabIndex = 5;
+            // 
+            // ButtonPesquisarid
+            // 
+            this.ButtonPesquisarid.Location = new System.Drawing.Point(348, 58);
+            this.ButtonPesquisarid.Name = "ButtonPesquisarid";
+            this.ButtonPesquisarid.Size = new System.Drawing.Size(75, 23);
+            this.ButtonPesquisarid.TabIndex = 6;
+            this.ButtonPesquisarid.Text = "Pesquisar";
+            this.ButtonPesquisarid.UseVisualStyleBackColor = true;
+            this.ButtonPesquisarid.Click += new System.EventHandler(this.ButtonPesquisarid_Click);
+            // 
             // telaoperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -71,6 +102,9 @@
             this.BackColor = System.Drawing.SystemColors.MenuText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ButtonPesquisarid);
+            this.Controls.Add(this.textid);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonatualizar);
             this.Controls.Add(this.txt1);
@@ -88,6 +122,9 @@
         private System.Windows.Forms.Label txt1;
         private System.Windows.Forms.Button buttonatualizar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textid;
+        private System.Windows.Forms.Button ButtonPesquisarid;
     }
 }
 
